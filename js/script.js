@@ -12,13 +12,23 @@ console.log('JS OK')
 // 6 - stampare il prezzo finale con massimo 2 cifre decimali
 
 
-const userAge = parseInt(document.getElementById('age'))
+const userAge = document.getElementById('age')
 const userKm = document.getElementById('km')
 const paragraph = document.getElementById('paragraph')
 const button = document.getElementById('button')
 const costForKm = 0.21
 let discount = null;
+const spanAge = document.querySelector('.age')
+const spanKm = document.querySelector('.km')
 console.log(userAge, userKm, paragraph, button)
 
-// userAge = parseInt(document.getElementById('age'))
-//  console.log(userAge)
+button.addEventListener('click', function (){
+    const km = userKm.value
+    const ticket = km * costForKm
+    const age = userAge.value
+    console.log(ticket, age)
+
+    spanAge.innerHTML = age
+    spanKm.innerHTML = km
+
+})
