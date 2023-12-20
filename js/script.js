@@ -26,12 +26,13 @@ console.log('JS OK')
 const nameField = document.getElementById('name');
 const ageField = document.getElementById('age');
 const kmsField = document.getElementById('kms');
-
+console.log(nameField, ageField, kmsField)
 // BUTTONS
 
 const resetButton = document.getElementById('reset-button')
 const confirmButton = document.getElementById('confirm-button')
 const buyButton = document.getElementById('buy-button')
+console.log(resetButton, confirmButton, buyButton)
 
 // TICKET
 
@@ -41,12 +42,12 @@ const rateElement = document.getElementById('rate')
 const carElement = document.getElementById('car')
 const pnrElement = document.getElementById('pnr')
 const priceElement = document.getElementById('price')
-
+console.log(ticketSection, passangerElement, rateElement, carElement, pnrElement, priceElement)
 // VARIABILI INIZIALI
 
 const pricePerKms = 0.21
 let rateName = 'Tariffa Ordinaria'
-
+console.log(pricePerKms)
 // EVENT LISTENER
 
 confirmButton.addEventListener('click', function(){
@@ -54,5 +55,5 @@ confirmButton.addEventListener('click', function(){
     const nameValue = nameField.value.trim()
     const kmsValue = parseInt(kmsField.value)
     const ageValue = ageField.value
-
+    console.log(nameValue, kmsValue, ageValue)
 })
