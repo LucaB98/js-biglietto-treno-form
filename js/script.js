@@ -43,6 +43,12 @@ const carElement = document.getElementById('car');
 const pnrElement = document.getElementById('pnr');
 const priceElement = document.getElementById('price');
 console.log(ticketSection, passangerElement, rateElement, carElement, pnrElement, priceElement);
+
+// ALERT    
+
+const formAlert = document.querySelector('.alert')
+
+
 // VARIABILI INIZIALI
 
 const pricePerKms = 0.21;
@@ -56,6 +62,21 @@ confirmButton.addEventListener('click', function(){
     const kmsValue = parseInt(kmsField.value);
     const ageValue = ageField.value;
     console.log(nameValue, kmsValue, ageValue);
+
+    // VALIDAZIONE
+
+    if(!nameValue || isNaN(kmsValue) || kmsValue < 1){
+        formAlert.classList.add('alert-danger');
+        formAlert.classList.remove('d-none', 'alert-success');
+        formAlert.innerText = 'Ci sono errori nel form  ';
+        ticketSection.classList.add('d-none')
+
+        return;
+    } else {
+        formAlert.classList.remove('d-none', 'alert-danger');
+        formAlert.classList.add('alert-success');
+        formAlert.innerText = 'Biglietto generato con successo';
+    }
 
 
     // CALCOLO IL PREZZO BASE
