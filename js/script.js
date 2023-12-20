@@ -50,5 +50,9 @@ let rateName = 'Tariffa Ordinaria'
 // EVENT LISTENER
 
 confirmButton.addEventListener('click', function(){
-    
+    // recupero i valori del form
+    const nameValue = nameField.value.trim()
+    const kmsValue = parseInt(kmsField.value)
+    const ageValue = ageField.value
+
 })
